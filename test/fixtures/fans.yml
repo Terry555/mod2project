@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  drunk: false
+  balance: 1
+  age: 1
+  favorite_band: MyString
+
+two:
+  name: MyString
+  drunk: false
+  balance: 1
+  age: 1
+  favorite_band: MyString

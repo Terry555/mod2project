@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  artist: one
+  venue: one
+  ticket: one
+
+two:
+  artist: two
+  venue: two
+  ticket: two
