@@ -1,0 +1,18 @@
+<%= form_for @fan do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br><br>
+
+  <%= f.label :drunk %><br>
+  <%= f.check_box :drunk %><br><br>
+
+  <%= f.label :balance %><br>
+  <%= f.number_field :balance %><br><br>
+
+  <%= f.label :age %><br>
+  <%= f.number_field :age %><br><br>
+
+  <%= f.label :favorite_artist %><br>
+  <%= f.text_field :favorite_artist %><br><br>
+
+  <%= f.submit %>
+<% end %>
