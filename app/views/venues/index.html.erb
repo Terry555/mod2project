@@ -1,0 +1,5 @@
+<h1>VENUES INDEX PAGE</h1>
+
+<% @venues.each do |venue| %>
+<%= link_to venue.name, venue_path(venue) %>
+<% end %>

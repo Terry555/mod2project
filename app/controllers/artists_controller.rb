@@ -11,6 +11,7 @@ class ArtistsController < ApplicationController
 
   def show
     @artist = Artist.find(params[:id])
+    @concerts = Concert.all
   end
 
 end

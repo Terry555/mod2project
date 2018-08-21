@@ -9,4 +9,8 @@ class ConcertsController < ApplicationController
     render :new
   end
 
+  def show
+    @concert = Concert.find(params[:id])
+  end
+
 end

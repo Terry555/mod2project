@@ -1,3 +1,12 @@
 <h2>Artist: <%= @artist.name %></h2>
 <h3>Genre: <%= @artist.genre %></h3>
 <h3>Bio: <%= @artist.bio %></h3>
+
+<ul>
+<% @concerts.each do |concert| %>
+  <% if concert.artist == @artist %>
+  <%= concert.date %> @ 
+  <%= concert.venue_name %><br><br>
+<% end %>
+<% end %>
+</ul>
