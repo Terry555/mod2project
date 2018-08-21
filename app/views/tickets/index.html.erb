@@ -2,5 +2,8 @@
 
 
 <% @tickets.each do |ticket| %>
-<li><%= ticket.price %></li>
+  <h4><%= ticket.concert_artist %></h4>
+    <ul>
+      <li><%= ticket.price %></li>
+    </ul>
 <% end %>
