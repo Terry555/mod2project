@@ -4,18 +4,17 @@ class TicketsController < ApplicationController
     @tickets = Ticket.all
   end
 
-  def new
-    @ticket = Ticket.new
-    render :new
-  end
-
   def show
     @ticket = Ticket.find(params[:id])
   end
 
+  def new
+    @ticket = Ticket.new
+  end
+
   def create
     @ticket = Ticket.create(ticket_params)
-    redirect_to ticket_path(@ticket)
+    redirect_to @ticket
   end
 
   def edit
@@ -25,12 +24,13 @@ class TicketsController < ApplicationController
   def update
     @ticket = Ticket.find(params[:id])
     @ticket.update(ticket_params)
+    redirect_to @ticket
   end
 
   private
 
   def ticket_params
-    params.require(:ticket).permit(:price, :fan_id, :concert_id)
+    params.require(:ticket).permit(:fan_id, :concert_id)
   end
 
 end
