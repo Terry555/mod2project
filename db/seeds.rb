@@ -20,7 +20,7 @@ Venue.create!(name: "Lincoln Hall", location: "Chicago", capacity: 507)
 Venue.create!(name: "Santos Party House", location: "New York", capacity: 480)
 
 Fan.create!(name: 'Billy', drunk: true, balance: 500, age: 19, favorite_artist: 'green day')
-# Fan.create!(name: 'Sally', drunk: false, balance: 1000, age: 28, favorite_artist: 'u2')
+Fan.create!(name: 'Sally', drunk: false, balance: 1000, age: 28, favorite_artist: 'u2')
 # Fan.create!(name: 'Teddy', drunk: false, balance: 100, age: 20, favorite_artist: 'kendrick lamar')
 # Fan.create!(name: 'Mary', drunk: true, balance: 400, age: 21, favorite_artist: 'bone thugs n harmony')
 # Fan.create!(name: 'Freddy', drunk: false, balance: 2000, age: 32, favorite_artist: 'ludwig van beethoven')
