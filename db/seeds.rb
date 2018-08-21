@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Artist.create!(name: 'Kanye West', genre: 'hip hop', years_experience: 13)
-Artist.create!(name: 'Ed Sheeran', genre: 'folk', years_experience: 7)
-Artist.create!(name: 'Taylor Swift', genre: 'pop', years_experience: 12)
-Artist.create!(name: 'Eminem', genre: 'rap', years_experience: 22)
-Artist.create!(name: 'Drake', genre: 'r&b', years_experience: 8)
-Artist.create!(name: 'Green Day', genre: 'rock', years_experience: 28)
+Artist.create!(name: 'Kanye West', genre: 'hip hop', bio: 'somethingsomething')
+Artist.create!(name: 'Ed Sheeran', genre: 'folk', bio: 'somethingsomething')
+Artist.create!(name: 'Taylor Swift', genre: 'pop', bio: 'somethingsomething')
+Artist.create!(name: 'Eminem', genre: 'rap', bio: 'somethingsomething')
+Artist.create!(name: 'Drake', genre: 'r&b', bio: 'somethingsomething')
+Artist.create!(name: 'Green Day', genre: 'rock', bio: 'somethingsomething')
 
 Venue.create!(name: "Grand Star Jazz Club", location: "Los Angeles", capacity: 300)
 Venue.create!(name: "The End", location: "Nashville", capacity: 200)
