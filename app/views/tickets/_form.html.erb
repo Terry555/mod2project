@@ -1,0 +1,15 @@
+
+<%= form_for @ticket do |f| %>
+
+  <%= f.label :price %>
+  <%= f.number_field :price %>
+
+  <%= f.label :fan_id %>
+  <%= f.number_field :fan_id %>
+
+  <%= f.label :concert_id %>
+  <%= f.number_field :concert_id %>
+
+  <%= f.submit %>
+
+<% end %>
