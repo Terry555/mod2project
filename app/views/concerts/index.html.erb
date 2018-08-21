@@ -8,5 +8,5 @@
     <li><%= concert.venue_location %></li>
     <li><%= concert.venue_capacity %></li>
   </ul>
-  <%= button_to "Buy ticket", new_ticket_path %>
+  <%= button_to "Buy ticket", new_ticket_path, method: :get %>
 <% end %>
