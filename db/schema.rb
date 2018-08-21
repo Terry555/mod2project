@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2018_08_20_205355) do
-=======
 ActiveRecord::Schema.define(version: 2018_08_20_204154) do
->>>>>>> tj1
 
   create_table "artists", force: :cascade do |t|
     t.string "name"
