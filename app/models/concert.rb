@@ -3,6 +3,7 @@ class Concert < ApplicationRecord
   belongs_to :venue
   delegate :name, to: :artist, prefix: true, allow_nil: true
   delegate :genre, to: :artist, prefix: true, allow_nil: true
+  delegate :years_experience, to: :artist, prefix: true, allow_nil: true
   delegate :name, to: :venue, prefix: true, allow_nil: true
   delegate :location, to: :venue, prefix: true, allow_nil: true
   delegate :capacity, to: :venue, prefix: true, allow_nil: true
