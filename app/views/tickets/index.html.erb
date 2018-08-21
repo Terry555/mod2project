@@ -1,11 +1,1 @@
 <h1>TICKET INDEX PAGE HELLOOO</h1>
-
-
-<% @tickets.each do |ticket| %>
-  <h4><%= ticket.concert_artist %></h4>
-    <ul>
-      <li>$<%= ticket.price %><br>
-      <%= ticket.concert.venue.name %><br>
-      <%= ticket.concert.date %></li>
-    </ul>
-<% end %>

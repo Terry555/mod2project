@@ -1,0 +1,12 @@
+<h2>Concerts Index Page</h2>
+
+<% @concerts.each do |concert| %>
+  <h4><%= concert.artist_name %></h4>
+  <ul>
+    <li><%= concert.artist_genre %></li>
+    <li><%= concert.venue_name %></li>
+    <li><%= concert.venue_location %></li>
+    <li><%= concert.venue_capacity %></li>
+  </ul>
+  <%= button_to "Buy ticket", new_ticket_path %>
+<% end %>
