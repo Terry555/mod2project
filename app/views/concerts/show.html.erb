@@ -1,0 +1,14 @@
+<h2>Review Your Purchase</h2>
+
+<ul>
+  <li><%= @concert.artist_name %></li>
+  <li><%= @concert.artist_genre %></li>
+  <li><%= @concert.venue_name %></li>
+  <li><%= @concert.venue_capacity %></li>
+</ul>
+
+<%= form_for @ticket do |f| %>
+  <%= f.collection_select :fan_id, Fan.all, :id, :name %><br><br>
+  <%= f.collection_select :concert_id, Concert.all, :id, :artist_name %><br><br>
+  <%= f.submit %>
+<% end %>

@@ -14,7 +14,7 @@ class TicketsController < ApplicationController
 
   def create
     @ticket = Ticket.create(ticket_params)
-    redirect_to @ticket
+    redirect_to fan_path(@ticket.fan_id)
   end
 
   def edit

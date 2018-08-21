@@ -4,3 +4,5 @@
   <%= f.collection_select :concert_id, Concert.all, :id, :artist_name %><br><br>
   <%= f.submit %>
 <% end %>
+
+<%= render partial: "tickets/form", object: @post %>
