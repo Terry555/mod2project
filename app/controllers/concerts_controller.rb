@@ -1,4 +1,5 @@
 class ConcertsController < ApplicationController
+  before_action :get_items_from_cart, only: [:index]
 
   def index
     @concerts = Concert.all
