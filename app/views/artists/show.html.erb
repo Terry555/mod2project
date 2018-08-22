@@ -5,9 +5,10 @@
 <ul>
 <% @concerts.each do |concert| %>
   <% if concert.artist == @artist %>
-  <%= concert.date %> @
-  <%= concert.venue_name %>
-  <%= button_to "Buy Ticket", new_ticket_path, method: :get%><br><br>
-<% end %>
+    <%= concert.date %> @
+    <%= concert.venue_name %>
+    <%= button_to "Buy Ticket", tickets_path, params: {concert_id: concert.id} %>
+   <br><br>
+  <% end %>
 <% end %>
 </ul>

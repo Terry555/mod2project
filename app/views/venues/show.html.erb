@@ -2,10 +2,9 @@
 <h2><%= @venue.name %></h2>
 
 <% @concerts.each do |concert| %>
-<% if concert.venue == @venue %>
-
-<%= concert.date %>
-<%= concert.artist_name %>
-<%= link_to "Buy Ticket", new_ticket_path %><br>
-<% end %>
+  <% if concert.venue == @venue %>
+    <%= concert.date %>
+    <%= concert.artist_name %>
+    <%= button_to "Buy Ticket", tickets_path, params: {concert_id: concert.id} %>
+  <% end %>
 <% end %>
