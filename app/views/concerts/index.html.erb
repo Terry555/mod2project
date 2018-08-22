@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <h1><%= link_to "ARTISTS", artists_path %></h1> ...
 <h1><%= link_to "VENUES", venues_path %></h1>
 =======
@@ -12,6 +12,5 @@
     <li><%= concert.venue_location %></li>
     <li><%= concert.venue_capacity %></li>
   </ul>
-  <%= button_to "Buy ticket", concert_path(concert), method: :get %>
+  <%= button_to "Buy ticket", new_ticket_path, method: :get %>
 <% end %>
->>>>>>> tj7
