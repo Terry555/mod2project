@@ -7,7 +7,7 @@
   <% if concert.artist == @artist %>
   <%= concert.date %> @
   <%= concert.venue_name %>
-  <%= link_to "Buy Ticket", new_ticket_path %><br><br>
+  <%= button_to "Buy Ticket", new_ticket_path, method: :get%><br><br>
 <% end %>
 <% end %>
 </ul>
