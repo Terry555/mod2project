@@ -16,8 +16,6 @@ class FansController < ApplicationController
   def create
     @fan = Fan.create(fan_params)
     if @fan.valid?
-      # flash[:notice] = "Welcome to SweetSeats #{@fan.username}"
-      # session[:fan_id] = @fan.id
       redirect_to @fan
     else
       render :new
@@ -29,9 +27,10 @@ class FansController < ApplicationController
   end
 
   def update
+    @fan = Fan.find(params[:id])
     if @fan.update(fan_params)
       flash[:notice] = "You successfully updated your profile!"
-      redirect_to @user
+      redirect_to @fan
     else
       render :edit
     end
@@ -40,6 +39,7 @@ class FansController < ApplicationController
   def destroy
     @fan = Fan.find(params[:id])
     @fan.destroy
+    @fan.tickets.destroy_all
     flash[:notice] = "Successfully deleted account for #{@fan.name}."
     redirect_to concerts_path
   end
