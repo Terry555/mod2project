@@ -6,6 +6,22 @@
   <li>Favorite Artist: <%= @fan.favorite_artist %></li>
 </ul>
 
-<%= @fan.tickets %><br>
+<h3><%= @fan.name %>'s Tickets</h3>
 
+<% @fan.tickets.each do |ticket| %>
+  ------------<br>
+  <%= ticket.concert.artist_name %><br>
+  $<%= ticket.concert.price %><br>
+  <%= ticket.concert.venue_name %><br>
+  <%= ticket.concert.venue_capacity %><br>
+  <%= button_to "Delete Ticket", ticket_path(ticket), method: :delete %>
+<% end %>
+<br><br>
 <%= link_to "Back to concerts", concerts_path %>
+
+
+<%= form_for @fan, method: :delete do |f| %>
+  <%= f.submit "Delete this user" %>
+<% end %>
+
+<%= button_to("Remove Profile", fan_path(@fan), { method: :delete }) %>
