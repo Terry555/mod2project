@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
 Artist.create!(name: 'Kanye West', genre: 'Hip Hop', bio: 'Kanye West is an American rapper, singer, songwriter, record producer, entrepreneur and fashion designer.')
 Artist.create!(name: 'Ed Sheeran', genre: 'Folk', bio: 'Ed Sheeran is an English singer, songwriter, guitarist, record producer, and actor.')
@@ -34,12 +27,6 @@ Venue.create!(name: "Blackbird Ordinary", location: "New Jersey", capacity: 400)
 Venue.create!(name: "Lincoln Hall", location: "Boston", capacity: 507)
 Venue.create!(name: "Santos Party House", location: "NYC", capacity: 480)
 
-Fan.create!(name: 'Billy', drunk: true, balance: 500, age: 19, favorite_artist: 'Green Day', username: '1', password: '1234')
-# Fan.create!(name: 'Sally', drunk: false, balance: 1000, age: 28, favorite_artist: 'u2')
-# Fan.create!(name: 'Teddy', drunk: false, balance: 100, age: 20, favorite_artist: 'kendrick lamar')
-# Fan.create!(name: 'Mary', drunk: true, balance: 400, age: 21, favorite_artist: 'bone thugs n harmony')
-# Fan.create!(name: 'Freddy', drunk: false, balance: 2000, age: 32, favorite_artist: 'ludwig van beethoven')
-# Fan.create!(name: 'Tammy', drunk: true, balance: 2500, age: 38, favorite_artist: 'frank sinatra')
 
 Concert.create!(artist_id: 1, venue_id: 1, date: '01-01-2018', price: 120)
 Concert.create!(artist_id: 1, venue_id: 2, date: '01-01-2018', price: 40)
@@ -102,14 +89,5 @@ Concert.create!(artist_id: 20, venue_id: 2, date: '01-01-2018', price: 60)
 Concert.create!(artist_id: 20, venue_id: 3, date: '01-01-2018', price: 60)
 Concert.create!(artist_id: 20, venue_id: 4, date: '01-01-2018', price: 60)
 
-# Ticket.create!(fan_id: 1, concert_id: 1)
-# Ticket.create!(fan_id: 5, concert_id: 2)
-# Ticket.create!(fan_id: 3, concert_id: 3)
-# Ticket.create!(fan_id: 6, concert_id: 4)
-# Ticket.create!(fan_id: 2, concert_id: 5)
-# Ticket.create!(fan_id: 4, concert_id: 6)
-# Ticket.create!(fan_id: 1, concert_id: 7)
-# Ticket.create!(fan_id: 6, concert_id: 8)
-# Ticket.create!(fan_id: 5, concert_id: 9)
 
 puts "It worked!"
