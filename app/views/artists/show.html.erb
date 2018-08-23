@@ -3,10 +3,11 @@
 <h3>Bio: <%= @artist.bio %></h3>
 
 <ul>
-<% @concerts.each do |concert| %>
+<% @concerts.sort_by{|concert| [concert.date]}.each do |concert| %>
   <% if concert.artist == @artist %>
-    <%= concert.date %>
-    <%= concert.venue_name %>
+    <%= concert.date.to_formatted_s(:long) %> <br>
+    <%= concert.venue_name %><br>
+    $<%= concert.price %>
     <%= button_to "Buy Ticket", tickets_path, params: {concert_id: concert.id} %>
     <br><br>
   <% end %>
