@@ -14,14 +14,24 @@
   $<%= ticket.concert.price %><br>
   <%= ticket.concert.venue_name %><br>
   <%= ticket.concert.venue_capacity %><br>
-  <%= button_to "Delete Ticket", ticket_path(ticket), method: :delete %>
+
+  <%=
+  button_to "Delete Ticket",
+  ticket_path(ticket),
+  method: :delete,
+  data: {confirm: "Are you sure?"}
+   %>
+
 <% end %>
+
 <br><br>
+
 <%= link_to "Back to concerts", concerts_path %>
 
+<br><br>
 
-<%= form_for @fan, method: :delete do |f| %>
-  <%= f.submit "Delete this user" %>
-<% end %>
+<%= button_to "Edit Profile", edit_fan_path(@fan), { method: :get} %>
+
+<br><br>
 
 <%= button_to("Remove Profile", fan_path(@fan), { method: :delete }) %>

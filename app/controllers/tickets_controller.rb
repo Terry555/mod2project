@@ -2,6 +2,7 @@ class TicketsController < ApplicationController
 
   def show
     @ticket = Ticket.find(params[:id])
+    @fan = Fan.all.find_by(id: @ticket.fan_id)
   end
 
   def new
@@ -20,16 +21,6 @@ class TicketsController < ApplicationController
     @fan = Fan.all.find_by(id: @ticket.fan_id)
     redirect_to fan_path(@fan)
   end
-
-  # def edit
-  #   @ticket = Ticket.find(params[:id])
-  # end
-  #
-  # def update
-  #   @ticket = Ticket.find(params[:id])
-  #   @ticket.update(ticket_params)
-  #   redirect_to @ticket
-  # end
 
   private
 
