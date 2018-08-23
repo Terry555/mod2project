@@ -1,40 +1,4 @@
 
-<h1><%= link_to "ARTISTS", artists_path %></h1> ...
-<h1><%= link_to "VENUES", venues_path %></h1>
-=======
-
-<h2>Concerts Index Page</h2>
-
-<h3><%= flash[:notice] %></h3>
-
-<h4>Your Cart:</h4>
-<ol>
-  <% @cart_items.each do |item| %>
-    <li><%= item.artist_name %> | $<%= item.price %></li>
-  <% end %>
-</ol>
-
-  <% @cart_items.each do |item| %>
-  <% item.tickets.create(fan_id: 1) %>
-  <%= button_to "Buy Ticket", concerts_path, method: :post %>
-  <% end %>
-
-<hr>
-
-<hr>
-
-<% @concerts.each do |concert| %>
-  <h4><%= concert.artist_name %></h4>
-  <ul>
-    <li><%= concert.artist_genre %></li>
-    <li><%= concert.venue_name %></li>
-    <li><%= concert.venue_location %></li>
-    <li><%= concert.venue_capacity %></li>
-  </ul>
-  <%=
-  button_to "Add to cart",
-  add_to_cart_path,
-  method: :patch,
-  params: { concert_id: concert.id,  }
-  %>
-<% end %>
+<h1><%= link_to "SEARCH BY ARTIST", artists_path %></h1>
+<br><br>
+<h1><%= link_to "SEARCH BY VENUE", venues_path %></h1>

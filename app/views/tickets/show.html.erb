@@ -1,1 +1,9 @@
-<h1>THIS IS THE TICKET SHOW PAGE</h1>
+
+<h2>Review Your Ticket</h2>
+
+<%= @ticket.concert.artist_name %><br>
+<%= @ticket.concert.venue_name %><br>
+<%= @ticket.concert.price %><br>
+<%= @ticket.concert.date %><br><br>
+
+<%= link_to "Back To Concerts", concerts_path %>
