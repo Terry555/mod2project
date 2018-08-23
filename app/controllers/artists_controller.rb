@@ -12,6 +12,7 @@ class ArtistsController < ApplicationController
   def show
     @artist = Artist.find(params[:id])
     @concerts = Concert.all
+    # @sorted_concerts = @concerts.sort_date
   end
 
 end
