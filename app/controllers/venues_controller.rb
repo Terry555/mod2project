@@ -1,4 +1,5 @@
 class VenuesController < ApplicationController
+  before_action :authorized
 
   def index
     @venues = Venue.all
