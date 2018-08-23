@@ -1,3 +1,4 @@
+<h1 style="background-color:DodgerBlue;">Hello World</h1>
 <h1>VENUE SHOW PAGE</h1>
 <h2><%= @venue.name %></h2>
 
@@ -8,3 +9,5 @@
     <%= button_to "Buy Ticket", tickets_path, params: {concert_id: concert.id} %>
   <% end %>
 <% end %>
+
+<%= button_to "Back to Venues", venues_path, method: :get %>
