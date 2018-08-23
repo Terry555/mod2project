@@ -1,9 +1,5 @@
 class TicketsController < ApplicationController
 
-  # def index
-  #   @tickets = Ticket.all
-  # end
-
   def show
     @ticket = Ticket.find(params[:id])
   end
@@ -13,9 +9,16 @@ class TicketsController < ApplicationController
   end
 
   def create
-    # byebug
     @ticket = Ticket.create(fan_id: 1, concert_id: params[:concert_id])
     redirect_to @ticket
+  end
+
+  def destroy
+    @ticket = Ticket.find(params[:id])
+    @ticket.destroy
+    flash[:notice] = "Your ticket has been deleted"
+    @fan = Fan.all.find_by(id: @ticket.fan_id)
+    redirect_to fan_path(@fan)
   end
 
   # def edit
