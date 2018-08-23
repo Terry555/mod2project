@@ -1,5 +1,5 @@
 class FansController < ApplicationController
-  skip_before_action :authorized, only: [:new, :create, :show], raise: false
+  before_action :authorized, except: [:new, :create]
 
   def show
     @fan = Fan.find(params[:id])
@@ -16,6 +16,8 @@ class FansController < ApplicationController
   def create
     @fan = Fan.create(fan_params)
     if @fan.valid?
+      flash[:notice] = "Signup successful! Welcome, #{@fan.username}."
+      session[:fan_id] = @fan.id
       redirect_to @fan
     else
       render :new
@@ -41,7 +43,7 @@ class FansController < ApplicationController
     @fan.destroy
     @fan.tickets.destroy_all
     flash[:notice] = "Successfully deleted account for #{@fan.name}."
-    redirect_to concerts_path
+    redirect_to new_fan_path
   end
 
   private
