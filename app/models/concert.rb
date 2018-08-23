@@ -10,4 +10,5 @@ class Concert < ApplicationRecord
   delegate :location, to: :venue, prefix: true, allow_nil: true
   delegate :capacity, to: :venue, prefix: true, allow_nil: true
 
+
 end
