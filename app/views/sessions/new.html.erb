@@ -1,0 +1,15 @@
+<h2>Login Below</h2>
+
+<h3><%= flash[:notice] %></h3>
+
+<%= form_tag login_path method: :post do %>
+
+  <%= label_tag "Username" %><br>
+  <%= text_field_tag :username %><br><br>
+
+  <%= label_tag "Password" %><br>
+  <%= password_field_tag :password %><br><br>
+
+  <%= submit_tag "Login" %>
+
+<% end %>

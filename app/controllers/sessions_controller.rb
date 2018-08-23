@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  skip_before_action :authorized, except: :destroy, raise: false
+  before_action :authorized, only: :destroy
 
   def new
   end
@@ -7,7 +7,6 @@ class SessionsController < ApplicationController
   def create
     @fan = Fan.find_by({username: params[:username]})
     if !!@fan && @fan.authenticate(params[:password])
-      flash[:notice] = "Successfully logged in #{@fan.username}!"
       session[:fan_id] = @fan.id
       redirect_to profile_path
     else
