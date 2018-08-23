@@ -14,6 +14,13 @@
   <% end %>
 </ol>
 
+  <% @cart_items.each do |item| %>
+  <% item.tickets.create(fan_id: 1) %>
+  <%= button_to "Buy Ticket", concerts_path, method: :post %>
+  <% end %>
+
+<hr>
+
 <hr>
 
 <% @concerts.each do |concert| %>
@@ -25,7 +32,7 @@
     <li><%= concert.venue_capacity %></li>
   </ul>
   <%=
-  button_to "Buy ticket",
+  button_to "Add to cart",
   add_to_cart_path,
   method: :patch,
   params: { concert_id: concert.id,  }
