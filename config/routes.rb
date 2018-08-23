@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :tickets
   resources :fans, except: :edit
 
+  get '/', to: 'concerts#index'
+
   get '/profile', to: 'fans#profile', as: 'profile'
   get '/profile/edit', to: 'fans#edit', as: 'edit_profile'
 

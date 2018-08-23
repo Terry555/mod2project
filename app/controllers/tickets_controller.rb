@@ -1,4 +1,5 @@
 class TicketsController < ApplicationController
+  before_action :authorized
 
   def show
     @ticket = Ticket.find(params[:id])
@@ -10,7 +11,7 @@ class TicketsController < ApplicationController
   end
 
   def create
-    @ticket = Ticket.create(fan_id: 1, concert_id: params[:concert_id])
+    @ticket = Ticket.create(fan_id: session[:fan_id], concert_id: params[:concert_id])
     redirect_to @ticket
   end
 

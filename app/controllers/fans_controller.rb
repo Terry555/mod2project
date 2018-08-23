@@ -3,9 +3,12 @@ class FansController < ApplicationController
 
   def show
     @fan = Fan.find(params[:id])
+    @balance = @fan.balance - current_balance
   end
 
   def profile
+    @fan = Fan.find(session[:fan_id])
+    @balance = @fan.balance - current_balance
     render :show
   end
 
@@ -50,6 +53,16 @@ class FansController < ApplicationController
 
   def fan_params
     params.require(:fan).permit(:name, :drunk, :balance, :age, :favorite_artist, :username, :password)
+  end
+
+  def current_balance
+    money_spent = []
+    if @fan.tickets == []
+      0
+    else
+      @fan.tickets.each{|ticket| money_spent << ticket.concert_price}
+      money_spent.inject(:+)
+    end
   end
 
 end

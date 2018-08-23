@@ -1,34 +1,34 @@
 <h2><%= @fan.name %>'s Profile</h2>
 
-<ul>
-  <li>Balance: $<%= @fan.balance %></li>
-  <li>Age: <%= @fan.age %></li>
-  <li>Favorite Artist: <%= @fan.favorite_artist %></li>
-</ul>
+  <p>Balance: $<%= @balance %></p>
+  <p>Age: <%= @fan.age %></p>
+  <p>Favorite Artist: <%= @fan.favorite_artist %></p>
 
 <h3><%= @fan.name %>'s Tickets</h3>
 
-<% @fan.tickets.each do |ticket| %>
-  ------------<br>
-  <%= ticket.concert.artist_name %><br>
-  $<%= ticket.concert.price %><br>
-  <%= ticket.concert.venue_name %><br>
-  <%= ticket.concert.venue_capacity %><br>
+<% if @fan.tickets.count == 0 %>
+  <%= "You have no tickets" %>
+  <% else %>
+  <% @fan.tickets.each do |ticket| %>
+    ------------<br>
+    <p><%= ticket.concert.artist_name %><p>
+    <p>$<%= ticket.concert.price %><p>
+    <p><%= ticket.concert.venue_name %><p>
+    <p><%= ticket.concert.venue_capacity %><p>
 
-  <%=
-  button_to "Delete Ticket",
-  ticket_path(ticket),
-  method: :delete,
-  data: {confirm: "Are you sure?"}
-   %>
+    <%=
+    button_to "Delete Ticket",
+    ticket_path(ticket),
+    method: :delete,
+    data: {confirm: "Are you sure?"}
+     %>
 
+  <% end %>
 <% end %>
 
 <br><br>
 
-<%= link_to "Back to concerts", concerts_path %>
-
-<br><br>
+<p><%= link_to "Back to concerts", concerts_path %><p>
 
 <%= button_to "Edit Profile", edit_fan_path(@fan), { method: :get} %>
 

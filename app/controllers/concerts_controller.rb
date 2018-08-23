@@ -1,4 +1,5 @@
 class ConcertsController < ApplicationController
+  before_action :authorized
 
   def index
     @concerts = Concert.all

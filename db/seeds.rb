@@ -1,3 +1,5 @@
+Fan.create!(name: 'Johnboy', drunk: true, balance: 900, age: 43, favorite_artist: 'Modest Mouse', username: '1', password: '123')
+
 
 Artist.create!(name: 'Kanye West', genre: 'Hip Hop', bio: 'Kanye West is an American rapper, singer, songwriter, record producer, entrepreneur and fashion designer.')
 Artist.create!(name: 'Ed Sheeran', genre: 'Folk', bio: 'Ed Sheeran is an English singer, songwriter, guitarist, record producer, and actor.')
