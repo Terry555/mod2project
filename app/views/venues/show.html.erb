@@ -8,3 +8,5 @@
     <%= button_to "Buy Ticket", tickets_path, params: {concert_id: concert.id} %>
   <% end %>
 <% end %>
+
+<%= button_to "Back to Venues", venues_path, method: :get %>
