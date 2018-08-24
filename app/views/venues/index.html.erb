@@ -10,7 +10,7 @@
 
 <ul>
   <% @venues.each do |venue| %>
-    <li><%= link_to venue.name, venue_path(venue) %> - <%= venue.location %></li>
+    <li><button class="index-button-b"><%= link_to venue.name, venue_path(venue) %> - <%= link_to venue.location, venue_path(venue) %></button></li>
   <% end %>
 </ul>
 
