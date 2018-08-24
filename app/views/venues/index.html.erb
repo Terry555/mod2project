@@ -8,9 +8,11 @@
 
 <h1>ALL VENUES</h1>
 
+<ul>
 <% @venues.each do |venue| %>
   <li><%= link_to venue.name, venue_path(venue) %> - <%= venue.location %></li>
 <% end %>
+</ul>
 
 <div class="button">
   <%= link_to "Back", concerts_path, method: :get %>
