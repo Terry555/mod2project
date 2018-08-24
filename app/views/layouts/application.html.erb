@@ -10,10 +10,10 @@
   </head>
 
   <body>
-    <%= logged_in? ? button_to('Logout', logout_path, method: :delete) : link_to('Login', login_path) %>
+    <%= logged_in? ? button_to('Logout', logout_path, method: :delete) : button_to('Signup', new_fan_path, method: :get)%>
     <%= button_to 'Concerts', concerts_path, method: :get %>
     <%= button_to 'Profile', profile_path, method: :get %>
-    <body style="background-color:lightgray;text-align:center">
+    <body style="background-color:ghostwhite;text-align:center">
     <font face="arial">
 
     <hr>
