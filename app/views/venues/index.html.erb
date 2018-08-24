@@ -1,10 +1,17 @@
-<body>
+<nav>
+  <ul class="nav-tabs" role="tablist">
+    <li class="active"><%= link_to 'Concerts', concerts_path, method: :get %></li>
+    <li><%= logged_in? ? link_to('Logout', logout_path, method: :delete) : link_to('Signup', new_fan_path, method: :get)%></li>
+    <li><%= link_to 'Profile', profile_path, method: :get %></li>
+  </ul>
+</nav>
 
-<h1>VENUES INDEX PAGE</h1>
+<h1>ALL VENUES</h1>
 
 <% @venues.each do |venue| %>
-<li><%= link_to venue.name, venue_path(venue) %> - <%= venue.location %></li>
+  <li><%= link_to venue.name, venue_path(venue) %> - <%= venue.location %></li>
 <% end %>
 
-<%= button_to "Back", concerts_path, method: :get %>
-</body>
+<div class="button">
+  <%= link_to "Back", concerts_path, method: :get %>
+</div>

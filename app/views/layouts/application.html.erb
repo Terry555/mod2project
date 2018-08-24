@@ -4,21 +4,16 @@
     <title>SweetSeat</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="../../assets/stylesheets/application.css">
   </head>
 
-  <body>
-    <%= logged_in? ? button_to('Logout', logout_path, method: :delete) : link_to('Login', login_path) %>
-    <%= button_to 'Concerts', concerts_path, method: :get %>
-    <%= button_to 'Profile', profile_path, method: :get %>
-    <body style="background-color:lightgray;text-align:center">
-    <font face="arial">
+  <body style="text-align:center">
+    <div class="container-fluid">
 
-    <hr>
+      <%= yield %>
 
-    <%= yield %>
-
+    </div>
   </body>
 </html>

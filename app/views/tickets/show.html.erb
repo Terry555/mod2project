@@ -1,20 +1,33 @@
-<h2>Review Your Purchase</h2>
+<nav>
+  <ul class="nav-tabs" role="tablist">
+    <li class="active"><%= link_to 'Concerts', concerts_path, method: :get %></li>
+    <li><%= logged_in? ? link_to('Logout', logout_path, method: :delete) : link_to('Signup', new_fan_path, method: :get)%></li>
+    <li><%= link_to 'Profile', profile_path, method: :get %></li>
+  </ul>
+</nav>
 
+<h2>REVIEW YOUR PURCHASE</h2>
 
 <%= @ticket.concert.artist_name %><br>
 <%= @ticket.concert.venue_name %><br>
 <%= @ticket.concert.price %><br>
 <%= @ticket.concert.date %><br><br>
 
-<%=
-button_to "Cancel Purchase",
-ticket_path(@ticket),
-method: :delete,
-data: {confirm: "Are you sure?"},
-controller: "concerts",
-action: "index"
-%>
-<br>
-<%= button_to "Confirm Purchase", fan_path(@fan), method: :get %>
-<br>
-<%= link_to "Back To Concerts", concerts_path %>
+<div class="button">
+  <%=
+  button_to "Cancel Purchase",
+  ticket_path(@ticket),
+  method: :delete,
+  data: {confirm: "Are you sure?"},
+  controller: "concerts",
+  action: "index"
+  %>
+</div>
+
+<div class="button">
+  <%= button_to "Confirm Purchase", fan_path(@fan), method: :get %>
+</div>
+
+<div class="button">
+  <%= link_to "Back To Concerts", concerts_path %>
+</div>
