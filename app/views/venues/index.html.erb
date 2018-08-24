@@ -6,13 +6,15 @@
   </ul>
 </nav>
 
-<h1>ALL VENUES</h1>
+<h1>ALL VENUES WITH UPCOMING CONCERTS</h1>
 
 <ul>
-<% @venues.each do |venue| %>
-  <li><%= link_to venue.name, venue_path(venue) %> - <%= venue.location %></li>
-<% end %>
+  <% @venues.each do |venue| %>
+    <li><%= link_to venue.name, venue_path(venue) %> - <%= venue.location %></li>
+  <% end %>
 </ul>
+
+<br><br><br>
 
 <div class="button">
   <%= link_to "Back", concerts_path, method: :get %>
