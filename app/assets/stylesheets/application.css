@@ -18,14 +18,30 @@ body {
   background-position: cover
 }
 
-nav ul li {
+nav ul {
   text-align: center;
   text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+nav ul li {
+  display: block;
+  display: inline;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .button {
   padding: 15px;
   color: blue;
+  text-decoration: none;
 }
 
 button {
@@ -37,7 +53,6 @@ button {
 }
 
 * {
-  font-family: "Montserrat", sans-serif;
-  src: url("https://fonts.googleapis.com/css?family=Montserrat")
+  font-family: "Verdana", sans-serif;
   color: #6A9AFF;
 }
