@@ -68,6 +68,21 @@ button .button a {
   background-position: center;
 }
 
+.index-button-b {
+  position: center;
+  margin-top: 10px;
+  padding: 20px;
+  background-image: url("http://sfwallpaper.com/images/blue-light-wallpaper-11.jpg");
+  background-position: center;
+}
+
+.index-button-b a {
+  display: block;
+  font-size: 45px;
+  text-decoration: none;
+  color: #FFFAFA;
+}
+
 .index-button a {
   display: block;
   font-size: 45px;
