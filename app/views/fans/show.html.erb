@@ -38,12 +38,14 @@
 
 <br><br>
 
-<p><%= link_to "Back to concerts", concerts_path %><p>
+<button class="button">
+  <%= link_to "Back to concerts", concerts_path %>
+</button>
 
 <div class="button">
   <%= link_to "Edit Profile", edit_fan_path(@fan), { method: :get} %>
 </div>
 
 <div class="button">
-  <%= link_to("Remove Profile", fan_path(@fan), { method: :delete }) %>
+  <%= button_to("Remove Profile", fan_path(@fan), { method: :delete }) %>
 </div>
