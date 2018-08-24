@@ -10,8 +10,8 @@
 
 <%= @ticket.concert.artist_name %><br>
 <%= @ticket.concert.venue_name %><br>
-<%= @ticket.concert.price %><br>
-<%= @ticket.concert.date %><br><br>
+$<%= @ticket.concert.price %><br>
+<%= @ticket.concert.date.to_formatted_s(:long) %><br><br>
 
 <div class="button">
   <%=
