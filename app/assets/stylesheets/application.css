@@ -1,11 +1,8 @@
-/* Confirmation of proper merges */
+
 body {
   background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/hf458qN/moving-bokeh-lights-abstract-animation-for-background-horizontal-crossing-of-light-discs-from-right-to-left-white-blue-and-pink-colors-60fps-animation-slowing-down-and-stopping_sw9ui61i__F0000.png");
   background-position: cover
-}
-
-nav {
-  padding: 10px;
+  padding: 0px;
 }
 
 nav ul {
@@ -13,19 +10,40 @@ nav ul {
   text-decoration: none;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 15px;
   display: block;
+  background-color: #333;
 }
 
 nav ul li {
   display: block;
   display: inline;
+  transition: 0.4s;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 0 10px;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: snow;
+}
+
+.active a {
+  background-color: snow;
+  color: #333;
+  padding: 15px 10px;
 }
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+ul li a {
+  text-decoration: none;
 }
 
 button .button {
