@@ -1,4 +1,12 @@
-<h2>Concert Details</h2>
+<nav>
+  <ul class="nav-tabs" role="tablist">
+    <li class="active"><%= link_to 'Concerts', concerts_path, method: :get %></li>
+    <li><%= logged_in? ? link_to('Logout', logout_path, method: :delete) : link_to('Signup', new_fan_path, method: :get)%></li>
+    <li><%= link_to 'Profile', profile_path, method: :get %></li>
+  </ul>
+</nav>
+
+<h2>CONCERT DETAILS</h2>
 
 <ul>
   <li><%= @concert.artist_name %></li>
@@ -7,5 +15,6 @@
   <li><%= @concert.venue_capacity %></li>
 </ul>
 
-<br><br>
-<%= link_to "Back to concerts", concerts_path %>
+<div class="button">
+  <%= link_to "Back to concerts", concerts_path %>
+</div>

@@ -1,4 +1,12 @@
-<h2><%= @fan.name %>'s Profile</h2>
+<nav>
+  <ul class="nav-tabs" role="tablist">
+    <li><%= link_to 'Concerts', concerts_path, method: :get %></li>
+    <li><%= logged_in? ? link_to('Logout', logout_path, method: :delete) : link_to('Signup', new_fan_path, method: :get)%></li>
+    <li class="active"><%= link_to 'Profile', profile_path, method: :get %></li>
+  </ul>
+</nav>
+
+<h2><%= @fan.name %>'S PROFILE</h2>
 
   <p>Balance: $<%= @balance %></p>
   <p>Age: <%= @fan.age %></p>
@@ -16,12 +24,14 @@
     <p><%= ticket.concert.venue_name %><p>
     <p><%= ticket.concert.venue_capacity %><p>
 
-    <%=
-    button_to "Delete Ticket",
-    ticket_path(ticket),
-    method: :delete,
-    data: {confirm: "Are you sure?"}
-     %>
+    <div class="button">
+      <%=
+      link_to "Delete Ticket",
+      ticket_path(ticket),
+      method: :delete,
+      data: {confirm: "Are you sure?"}
+       %>
+    </div>
 
   <% end %>
 <% end %>
@@ -30,8 +40,10 @@
 
 <p><%= link_to "Back to concerts", concerts_path %><p>
 
-<%= button_to "Edit Profile", edit_fan_path(@fan), { method: :get} %>
+<div class="button">
+  <%= link_to "Edit Profile", edit_fan_path(@fan), { method: :get} %>
+</div>
 
-<br><br>
-
-<%= button_to("Remove Profile", fan_path(@fan), { method: :delete }) %>
+<div class="button">
+  <%= link_to("Remove Profile", fan_path(@fan), { method: :delete }) %>
+</div>
