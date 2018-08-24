@@ -56,3 +56,7 @@ button {
   font-family: "Verdana", sans-serif;
   color: #6A9AFF;
 }
+
+.nav-tabs li a {
+  text-decoration: none;
+}
