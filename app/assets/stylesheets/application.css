@@ -1,18 +1,4 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* Confirmation of proper merges */
 body {
   background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/hf458qN/moving-bokeh-lights-abstract-animation-for-background-horizontal-crossing-of-light-discs-from-right-to-left-white-blue-and-pink-colors-60fps-animation-slowing-down-and-stopping_sw9ui61i__F0000.png");
   background-position: cover
