@@ -1,4 +1,12 @@
-<h2>Login Below</h2>
+<nav>
+  <ul class="nav-tabs" role="tablist">
+    <li><%= link_to 'Concerts', concerts_path, method: :get %></li>
+    <li class="active"><%= logged_in? ? link_to('Logout', logout_path, method: :delete) : link_to('Signup', new_fan_path, method: :get)%></li>
+    <li><%= link_to 'Profile', profile_path, method: :get %></li>
+  </ul>
+</nav>
+
+<h2>LOGIN BELOW</h2>
 
 <h3><%= flash[:notice] %></h3>
 

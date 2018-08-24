@@ -1,5 +1,8 @@
 {
   "name": "SweetSeat",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "semantic-ui-ember": "github:semantic-org/Semantic-UI-Ember"
+  }
 }

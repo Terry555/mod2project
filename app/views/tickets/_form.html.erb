@@ -1,8 +1,0 @@
-
-<%= form_for @ticket do |f| %>
-  <%= f.collection_select :fan_id, Fan.all, :id, :name %><br><br>
-  <%= f.collection_select :concert_id, Concert.all, :id, :artist_name %><br><br>
-  <%= f.submit %>
-<% end %>
-
-<%= render partial: "tickets/form", object: @post %>
