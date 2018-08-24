@@ -9,6 +9,12 @@
 <h2><%= @venue.name %></h2>
 <h2>Location: <%= @venue.location %></h2>
 <h2>Capacity: <%= @venue.capacity %></h2>
+<hr>
+
+<br><br>
+
+<h3>UPCOMING CONCERTS</h3>
+<h3>-----------------</h3>
 
 
 <% @concerts.sort_by{|concert| [concert.date]}.each do |concert| %>
@@ -17,7 +23,7 @@
     <%= concert.artist_name %><br>
     $<%= concert.price %>
     <div class="button">
-      <%= link_to "Buy Ticket", tickets_path, params: {concert_id: concert.id} %>
+      <%= button_to "Buy Ticket", tickets_path, params: {concert_id: concert.id} %>
     </div>
   <% end %>
 <% end %>

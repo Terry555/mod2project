@@ -6,13 +6,15 @@
   </ul>
 </nav>
 
-<h1>ALL ARTISTS</h1>
+<h1>ALL ARTISTS WITH UPCOMING CONCERTS</h1>
 
 <ul>
   <% @artists.each do |artist| %>
     <li><%= link_to artist.name, artist_path(artist) %></li>
   <%end%>
 </ul>
+
+<br><br><br>
 
 <div class="button">
   <%= link_to "Back", concerts_path %>
