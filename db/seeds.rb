@@ -1,4 +1,4 @@
-Fan.create!(name: 'Johnboy', drunk: true, balance: 900, age: 43, favorite_artist: 'Modest Mouse', username: '1', password: '123')
+Fan.create!(name: 'Johnboy', drunk: true, balance: 200, age: 43, favorite_artist: 'Modest Mouse', username: '1', password: '123')
 
 
 Artist.create!(name: 'Kanye West', genre: 'Hip Hop', bio: 'Kanye West is an American rapper, singer, songwriter, record producer, entrepreneur and fashion designer.')
@@ -29,8 +29,6 @@ Venue.create!(name: "Blackbird Ordinary", location: "Brooklyn", capacity: 1400)
 Venue.create!(name: "Lincoln Hall", location: "New Jersey", capacity: 800)
 Venue.create!(name: "Santos Party House", location: "Boston", capacity: 880)
 
-
-Fan.create!(name: 'Johnboy', drunk: true, balance: 900, age: 43, favorite_artist: 'Modest Mouse', username: '1', password: '123')
 
 Concert.create!(artist_id: 1, venue_id: 1, date: rand(Date.civil(2018,8,24)..Date.civil(2018,12,31)), price: rand(19..120))
 Concert.create!(artist_id: 1, venue_id: 2, date: rand(Date.civil(2018,8,24)..Date.civil(2018,12,31)), price: rand(19..120))
