@@ -1,4 +1,4 @@
-Fan.create!(name: 'Johnboy', drunk: true, balance: 900, age: 43, favorite_artist: 'Modest Mouse', username: '1', password: '123')
+Fan.create!(name: 'Johnboy', drunk: true, balance: 200, age: 43, favorite_artist: 'Modest Mouse', username: '1', password: '123')
 
 
 Artist.create!(name: 'Kanye West', genre: 'Hip Hop', bio: 'Kanye West is an American rapper, singer, songwriter, record producer, entrepreneur and fashion designer.')
@@ -6,7 +6,7 @@ Artist.create!(name: 'Ed Sheeran', genre: 'Folk', bio: 'Ed Sheeran is an English
 Artist.create!(name: 'Taylor Swift', genre: 'Pop', bio: 'Taylor Swift is an American singer-songwriter.')
 Artist.create!(name: 'Eminem', genre: 'Rap', bio: 'Marshall Mathers known professionally as Eminem (often stylized as EMINƎM), is an American rapper, songwriter, record producer, record executive, and actor.')
 Artist.create!(name: 'Drake', genre: 'R&b', bio: 'Drake is a Canadian rapper, singer, songwriter, record producer, and actor.')
-Artist.create!(name: 'The Weeknd', genre: 'R&b', bio: 'Abel Tesfaye, known by his stage name The Weeknd, is a Canadian singer, songwriter, and record producer.')
+Artist.create!(name: 'Nickelback', genre: 'Rock', bio: 'Canadian band Nickelback is the best band of all time.')
 Artist.create!(name: 'Ariana Grande', genre: 'Pop', bio: 'Ariana Grande is an American singer and actress. ')
 Artist.create!(name: 'Migos', genre: 'Hip Hop', bio: 'Migos is an American hip hop trio from Lawrenceville, Georgia, founded in 2008.')
 Artist.create!(name: 'Imagine Dragons', genre: 'Pop Rock', bio: 'Imagine Dragons is an American pop rock band from Las Vegas, Nevada.')
@@ -29,8 +29,6 @@ Venue.create!(name: "Blackbird Ordinary", location: "Brooklyn", capacity: 1400)
 Venue.create!(name: "Lincoln Hall", location: "New Jersey", capacity: 800)
 Venue.create!(name: "Santos Party House", location: "Boston", capacity: 880)
 
-
-Fan.create!(name: 'Johnboy', drunk: true, balance: 900, age: 43, favorite_artist: 'Modest Mouse', username: '1', password: '123')
 
 Concert.create!(artist_id: 1, venue_id: 1, date: rand(Date.civil(2018,8,24)..Date.civil(2018,12,31)), price: rand(19..120))
 Concert.create!(artist_id: 1, venue_id: 2, date: rand(Date.civil(2018,8,24)..Date.civil(2018,12,31)), price: rand(19..120))

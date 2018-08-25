@@ -6,13 +6,15 @@
   </ul>
 </nav>
 
-<h2><%= @fan.name %>'S PROFILE</h2>
+<h2><%= @fan.name.upcase %>'S PROFILE</h2>
 
-  <p>Balance: $<%= @balance %></p>
+  <p style="color:green; font-size:24px">Balance: $<%= @balance %></p>
   <p>Age: <%= @fan.age %></p>
   <p>Favorite Artist: <%= @fan.favorite_artist %></p>
 
-<h3><%= @fan.name %>'s Tickets</h3>
+  <br><br><br>
+
+<h3><%= @fan.name.upcase %>'S TICKETS</h3>
 
 <% if @fan.tickets.count == 0 %>
   <%= "You have no tickets" %>
@@ -41,11 +43,11 @@
 <button class="button">
   <%= link_to "Back to concerts", concerts_path %>
 </button>
-
+<br><br>
 <div class="button">
-  <%= link_to "Edit Profile", edit_fan_path(@fan), { method: :get} %>
+  <%= link_to "Edit Profile", edit_fan_path(@fan) %>
 </div>
-
+<br><br>
 <div class="button">
   <%= button_to("Remove Profile", fan_path(@fan), { method: :delete }) %>
 </div>

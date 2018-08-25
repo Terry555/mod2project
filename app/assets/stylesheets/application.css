@@ -1,3 +1,15 @@
+* {
+  font-family: "Verdana", sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 100;
+  color: #36454f;
+}
+
+.nav-tabs li a {
+  padding: 15px;
+  text-decoration: none;
+}
 
 body {
   background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/hf458qN/moving-bokeh-lights-abstract-animation-for-background-horizontal-crossing-of-light-discs-from-right-to-left-white-blue-and-pink-colors-60fps-animation-slowing-down-and-stopping_sw9ui61i__F0000.png");
@@ -75,15 +87,17 @@ button .button a {
   color: #FFFAFA;
 }
 
-* {
-  font-family: "Verdana", sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 100;
-  color: #36454f;
+.index-button-b {
+  position: center;
+  margin-top: 10px;
+  padding: 20px;
+  background-image: url("http://sfwallpaper.com/images/blue-light-wallpaper-11.jpg");
+  background-position: center;
 }
 
-.nav-tabs li a {
-  padding: 15px;
+.index-button-b a {
+  display: block;
+  font-size: 45px;
   text-decoration: none;
+  color: #FFFAFA;
 }

@@ -10,7 +10,7 @@
 
 <ul>
   <% @artists.each do |artist| %>
-    <li><%= link_to artist.name, artist_path(artist) %></li>
+    <li><button class="index-button-b"><%= link_to artist.name, artist_path(artist) %></button></li>
   <%end%>
 </ul>
 
